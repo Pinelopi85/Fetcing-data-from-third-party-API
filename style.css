@@ -1,0 +1,13 @@
+.photos{
+    margin: 10px 12px 10px 12px;
+}
+
+.photos img: hover {
+
+}
+
+.photos img{
+    padding:10px;
+    width 150px;
+    transition: 2s;
+}

@@ -9,11 +9,22 @@ console.log("after it has run");
 photosPromise
 .then(data => data.json())
 .then(data => {
-    data.photos.photo.forEach((item) => {
-        console.log(item.title);
+    data.photos.photo.forEach((object) => {
+        console.log(object);
     });
     console.log(data);
 })
+
+
+
+function createImages(images) {
+    for (let i of imgs) {
+        const image = document.createElement('img');
+        image.setAttribute('photos', i.dowload_url);
+        image.classList.add('loading');
+        document.getElementById(div).appendChild(image);
+    }
+}
 
 //the code above results to the json. ES6
 
@@ -28,7 +39,7 @@ function addElement () {
     document.body.insertBefore(newDiv, currentDiv);
 }*/
 
-window.onload = () => {
+/*window.onload = () => {
     fetch('https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=fbd58be6b4f585662024b8f54c2d74f4&gallery_id=66911286-72157651066599621&format=json&nojsoncallback=1')
         .then(function(response) {
             return response.json();
@@ -39,16 +50,33 @@ window.onload = () => {
                 .catch(err => {
                     console.log(err);
                 });
+            } */
+
+            /*function photosResponse (rsp) {
+
+                if (rsp.stat != "ok") {
+                    return;
+                }
+            
+                for (var i=0; i<rsp.photos.photo.length; i++) {
+            
+                var photo = rsp.photos.photo[i];
+            
+                var div = document.createElement ('div');
+                var img = document.createElement ('img');
+            
+                div.appendChild(img);
+
+                var element = document.getElementById(flex-container);
+                element.appendChild(div);
+                //document.body.appendChild(div);
+                    }
             }
 
 
+    /*var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" +today.getSeconds();
+    var dateTime = date+' '+time;
 
-//var htmlImageElement = new Image(width, height);
-//MediaKeyMessageEvent.src = 'url';
-//document.body.appendChild(myImage);
-
-
-
-//document.body.onload = addElement;
-//document.getElementById('getPhotos').addEventListener
-    //('click', getText);
+    document.body.innerHTML="<p>Date:"+dateTime+"</p>"*/

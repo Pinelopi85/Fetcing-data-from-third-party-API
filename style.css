@@ -1,34 +1,39 @@
-header{
-    background-color: darkgray;
+header {
+    background-color: rgb(230, 223, 223);
 }
 
-h1{
+h1 {
     text-align: center;
     font: 45px;
     font-family: Arial, Helvetica, sans-serif;
     color: darkolivegreen;
+    padding: 8px;
 }
-.photos{
+/*.photos{
     margin: 10px 12px 10px 12px;
-}
+}*/
 
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: darkolivegreen;
+    background-color:#e6ffb3;
 }
 
-div{
+#flex-container {
     margin: auto;
-    background-color: aqua;
+    background-color:darkolivegreen;
+    padding: 20px 2px 20px 2px;
 }
-
 
 .photos img {
-    padding: 10px;
-    width: 150px;
-    transition: 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:inherit;
+    padding: 20px;
+    /*width: 700px;
+    transition: 2s;*/
 }
 
 footer {
@@ -40,4 +45,5 @@ footer p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: lightgray;
+    padding: 6px;
 }
